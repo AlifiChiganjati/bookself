@@ -19,9 +19,10 @@ form.addEventListener("submit", (e) => {
     id: Date.now(),
     title: book.value.trim(),
     author: author.value.trim(),
-    year: year.value.trim(),
+    year: Number(year.value),
     isCompleted: bookCompleted.checked,
   };
+  console.log(newBook);
   bookLists.push(newBook);
   saveBook();
   form.reset();
